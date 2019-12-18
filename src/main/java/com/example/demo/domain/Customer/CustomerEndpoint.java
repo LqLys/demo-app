@@ -1,7 +1,6 @@
 package com.example.demo.domain.Customer;
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,8 +24,8 @@ public class CustomerEndpoint {
     @GetMapping(path = "/add")
     public Customer addCustomer(){
         Customer customer = new Customer();
-        customer.firstName = "jacek";
-        customer.lastName = "placek";
+        customer.setFirstName("jacek");
+        customer.setLastName("placek");
         return customerRepository.save(customer);
     }
 }

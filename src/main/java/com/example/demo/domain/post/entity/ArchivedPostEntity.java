@@ -1,6 +1,7 @@
-package com.example.demo.domain.Customer;
+package com.example.demo.domain.post.entity;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
@@ -8,14 +9,10 @@ import org.springframework.data.annotation.Id;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Customer {
+@Builder
+public class ArchivedPostEntity {
 
     @Id
     private String id;
-
-    private String firstName;
-    private String lastName;
-
-
-
+    private ArchivedPostValue archivedPost;
 }
